@@ -4,8 +4,10 @@ import android.provider.BaseColumns;
 
 public final class QuizContract {
 
+    // Stops creation of object of this class
     private QuizContract(){}
 
+    // Database
     public static class QuestionsTable implements BaseColumns {
         public static final String TABLE_NAME = "quiz_questions";
         public static final String COLUMN_QUESTION = "question";
