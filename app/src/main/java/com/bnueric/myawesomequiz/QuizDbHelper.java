@@ -50,19 +50,19 @@ public class QuizDbHelper extends SQLiteOpenHelper {
      * Seeds the database with dummy data
      */
     private void fillQuestionsTable(){
-        Question q1 = new Question("A is correct", "A", "B", "C", 1);
+        Question q1 = new Question("What is the largest country in the world?", "Russia", "China", "USA", 1);
         addQuestion(q1);
 
-        Question q2 = new Question("B is correct", "A", "B", "C", 2);
+        Question q2 = new Question("What year did World War 1 begin?", "1905", "1914", "1919", 2);
         addQuestion(q2);
 
-        Question q3 = new Question("C is correct", "A", "B", "C", 3);
+        Question q3 = new Question("In what year did the Wall Street Crash take place", "1925", "1930", "1929", 3);
         addQuestion(q3);
 
-        Question q4 = new Question("A is correct again", "A", "B", "C", 1);
+        Question q4 = new Question("What is the scientific name of the kneecap", "Patella", "Femur", "Scapula", 1);
         addQuestion(q4);
 
-        Question q5 = new Question("B is correct again", "A", "B", "C", 2);
+        Question q5 = new Question("Which of these is not a province in China", "Fujian", "Yangtze", "Guangdong", 2);
         addQuestion(q5);
     }
 
@@ -80,8 +80,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
     }
 
-    public List<Question> getAllQuestions() {
-        List<Question> questionList = new ArrayList<>();
+    public ArrayList<Question> getAllQuestions() {
+        ArrayList<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery( "SELECT* FROM " + QuestionsTable.TABLE_NAME, null);
 
