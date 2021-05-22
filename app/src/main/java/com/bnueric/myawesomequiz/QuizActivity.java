@@ -186,9 +186,6 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * This method
-     */
     private void checkAnswer() {
         answered = true;
 
@@ -277,6 +274,9 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method saves the instance of the
+     * */
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);

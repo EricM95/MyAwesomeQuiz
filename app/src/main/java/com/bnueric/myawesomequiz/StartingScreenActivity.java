@@ -67,6 +67,7 @@ public class StartingScreenActivity extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
